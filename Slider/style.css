@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+ul {
+    list-style: none;
+}
+
+:root {
+    --master-color: #2196f3;
+    --super-master-color: #1787e0;
+}
+
+.container {
+    width: 60%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 15px auto;
+    border: 3px solid #e9e6e6;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 5px 25px 0 rgba(0 0 0 / 12%);
+    
+}
+@media (max-width: 992px) {
+    .container {
+        width: 90%;
+    }
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    word-spacing: -3px;
+    font-size: 15px;
+    padding: 5px 5px 8px;
+    border-bottom: 3px solid #e9e6e6;
+}
+header .logo {
+    color: blue;
+    text-shadow: 0 9px 2px #8a2be269;
+    font-size: 16px;
+}
+header label {
+    
+}
+.switch-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+}
+.toggle-switch {
+    height: 21px;
+    width: 53px;
+    border-radius: 10px;
+    background-color: #ebe7e7;
+    box-shadow: 0 0px 4px 0 rgba(0 0 0 / 9%);
+    position: relative;
+    transition: 0.7s ease;
+    cursor: pointer;
+}
+.toggle-switch::before {
+    content: '';
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    left: 2.5px;
+    top: 2.5px;
+    transition: 0.4s ease;
+}
+.switch-checkbox:checked + .toggle-switch {
+    background-color: var(--master-color);
+}
+.switch-checkbox:checked + .toggle-switch::before {
+    left: 64%;
+}
+
+section .images {
+    background-color: #efebeac4;
+    width: 80%;
+    margin: 20px auto 0;
+    padding: 10px;
+    box-shadow: 4px 4px 25px rgba( 0 0 0 / 10%);
+    border: 1px solid #ece5e5;
+}
+section .images div {
+    height: 550px;
+    border: 3px solid #e9e6e6;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+section .images div img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 0.6s ease;
+}
+section .images div img:hover {
+    transform: rotate(3deg) scale(1.1);
+    opacity: 0.2;
+}
+section .Control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #e9e6e6;
+    margin: 24px auto 0;
+    width: 90%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #eeeeee36;
+}
+section .Control button {
+    outline: none;
+    border: 2px solid #e9e6e6;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: -0.3px;
+    padding: 7px 10px;
+    font-size: 14px;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+section .Control button::selection {
+    opacity: 0;
+}
+section .Control button:first-child {
+    background-color: #ff0000ab;
+}
+section .Control button:first-child:hover {
+    background-color: red; 
+}
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+section .Control button:last-child {
+    background-color: var(--master-color); 
+}
+section .Control button:last-child:hover {
+    background-color: var(--super-master-color); 
+}
+
+section .Control .indexes {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #eeeeee8c;
+    border-radius: 3px;
+    gap: 6px 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+}
+section .Control .indexes span {
+    width: 28px;
+    background-color: #1787e017;
+    color: black;
+    border-radius: 4px;
+    border: 2px solid #e9e6e6;
+    text-align: center;
+    padding: 3px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+section .Control .indexes span::selection {
+    opacity: 0;
+}
+section .Control .indexes span:hover {
+    color: white;
+    background-color: var(--super-master-color);
+}
+section .Control .indexes span.active {
+    color: white;
+    background-color: var(--super-master-color);
+}
+section .images div img.show {
+    z-index: 1;
+    opacity: 1;
+}
+section .images div img.show:hover {
+    transform: rotate(3deg) scale(1.1);
+    opacity: 0.8;
+}
