@@ -9,6 +9,10 @@ ul {
     list-style: none;
 }
 
+body {
+    direction: rtl;
+}
+
 :root {
     --master-color: #2196f3;
     --super-master-color: #1787e0;
